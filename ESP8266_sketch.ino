@@ -113,10 +113,6 @@ void loop() {
   
   client.flush();
 
-  delay(1);
-  //Serial.println("Client disonnected");
-
-  // The client will actually be disconnected 
-  // when the function returns and 'client' object is detroyed
+  delay(10);
 }
 
