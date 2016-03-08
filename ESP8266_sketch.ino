@@ -36,12 +36,6 @@ void setup() {
   digitalWrite(0, 1);
   digitalWrite(2, 1);
   
-  // Connect to WiFi network
-  //Serial.println();
-  //Serial.println();
-  //Serial.print("Connecting to ");
-  //Serial.println(ssid);
-
   WiFi.mode(WIFI_STA);
   WiFi.begin(ssid, password);
   
@@ -51,10 +45,6 @@ void setup() {
 
   // Start the server
   server.begin();
-  
-  // Print the IP address
-  //Serial.println(WiFi.localIP());
-  //Serial.end();
   
   sensors.begin();
 }
@@ -81,7 +71,6 @@ void loop() {
   if (req.indexOf("1ON") != -1)
   {
     val = 0;
-    //Serial.println("1ON");
     // Set GPIO2 according to the request
     digitalWrite(0, 0);
   }
