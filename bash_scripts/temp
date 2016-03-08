@@ -1,0 +1,7 @@
+#!/bin/bash
+temp=`echo -ne "T?/r/n" | nc -q 2 IP PORT`
+if [ $temp ]; then
+	echo $temp
+else
+	echo "Connection Failed"
+fi
