@@ -36,12 +36,6 @@ void setup() {
   digitalWrite(0, 1);
   digitalWrite(2, 1);
   
-  // Connect to WiFi network
-  //Serial.println();
-  //Serial.println();
-  //Serial.print("Connecting to ");
-  //Serial.println(ssid);
-
   WiFi.mode(WIFI_STA);
   WiFi.begin(ssid, password);
   
@@ -81,7 +75,6 @@ void loop() {
   if (req.indexOf("1ON") != -1)
   {
     val = 0;
-    //Serial.println("1ON");
     // Set GPIO2 according to the request
     digitalWrite(0, 0);
   }
@@ -113,10 +106,6 @@ void loop() {
   
   client.flush();
 
-  delay(1);
-  //Serial.println("Client disonnected");
-
-  // The client will actually be disconnected 
-  // when the function returns and 'client' object is detroyed
+  delay(10);
 }
 
